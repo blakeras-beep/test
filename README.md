@@ -13,13 +13,14 @@ MarketField is a lightweight prototype web app for division leaders and land tea
 
 ## Running locally
 
-Because the prototype is built as a static HTML/CSS/JS app, simply open `index.html` in a browser. Optionally use a lightweight static server such as `npx serve` to enable local file uploads in the Market Data section:
+The prototype uses native ES modules, which most browsers block when loading files directly from disk. Run the bundled static server to ensure the app boots correctly and to enable the file-upload workflow:
 
 ```bash
-npx serve -s .
+npm install # no dependencies, but keeps scripts available
+npm start
 ```
 
-Then visit the reported URL (typically http://localhost:3000).
+Then visit [http://localhost:4173](http://localhost:4173) (or the port shown in the terminal). Any static hosting solution will also work as long as it serves the files over HTTP/HTTPS.
 
 ## Data model
 
